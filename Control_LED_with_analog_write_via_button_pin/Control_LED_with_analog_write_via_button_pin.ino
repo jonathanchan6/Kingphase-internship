@@ -12,7 +12,6 @@ void setup() {
 void loop() {
   buttonState = digitalRead(buttonPin);
 
-  //val = analogRead(A0);
   if (buttonState == HIGH) {
     val = val + 1;
     digitalWrite(ledPin, HIGH);
@@ -22,5 +21,5 @@ void loop() {
     digitalWrite(ledPin, LOW);
   }
 
-  Serial.println(val);
+  Serial.println(val);//val to show the LED turns on
 }
