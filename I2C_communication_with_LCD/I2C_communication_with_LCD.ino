@@ -32,8 +32,10 @@ void setup(void) {
   tft.initR(INITR_MINI160x80);  // Init ST7735S mini display
 
   // tft print function!
+  tft.setRotation(1);//rotate
   tftPrintTest();
 }
+
 
 void loop() {
   tft.invertDisplay(true);
@@ -45,9 +47,9 @@ void tftPrintTest() {
   tft.fillScreen(ST77XX_WHITE);//background colour
   tft.setCursor(0, 30);
   tft.setTextColor(ST77XX_BLACK);
-  tft.setTextSize(1);
-  tft.println(" Jonathan SID:");//text colour
+  tft.setTextSize(2);
+  tft.println("Jonathan SID:");//text colour
   tft.setTextColor(ST77XX_BLACK);
-  tft.setTextSize(1);
-  tft.println(" 1155142863");//text colour
+  tft.setTextSize(2);
+  tft.println("1155142863");//text colour
 }
