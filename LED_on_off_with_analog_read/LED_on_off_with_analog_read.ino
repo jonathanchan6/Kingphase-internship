@@ -6,13 +6,13 @@ void setup() {
 // set the input & output pins here 
 pinMode(led, OUTPUT); 
 pinMode(ir, INPUT); 
-Serial.begin(9600);/ opens serial port/
+Serial.begin(9600);
 } 
 
 void loop() { 
  int val = analogRead(ir);
  
- if (val > 256) { //since when obstacle detected, val > 256
+ if (val > 640) { //since when obstacle detected, val > 640
  digitalWrite(led, HIGH); 
  } 
 
