@@ -15,8 +15,8 @@ void loop() {
   Serial.println(buttonState);//val to show the LED turns on
 }*/
 
-int ledPin = 8;      // LED connected to digital pin 9
-int analogPin = A2;   // potentiometer connected to analog pin 3
+int ledPin = 8;      // LED connected to digital pin 8
+int analogPin = 2;   // potentiometer connected to analog pin 3
 int val;         // variable to store the read value
 
 void setup() {
@@ -25,7 +25,10 @@ void setup() {
 }
 
 void loop() {
-  val = analogRead(analogPin);  // read the input pin
-  analogWrite(ledPin, val / 4); 
-  Serial.println(val);
+  val = digitalRead(analogPin);  // read the input pin
+  if (val == HIGH){
+    digitalWrite(ledPin, HIGH);
+  }else {
+    digitalWrite(ledPin, LOW);
+  }
 }

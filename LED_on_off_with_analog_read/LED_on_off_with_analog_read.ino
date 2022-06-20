@@ -12,7 +12,7 @@ Serial.begin(9600);
 void loop() { 
  int val = analogRead(ir);
  
- if (val > 640) { //since when obstacle detected, val > 640
+ if (val > 0) { //since when obstacle detected, val > 640
  digitalWrite(led, HIGH); 
  } 
 
